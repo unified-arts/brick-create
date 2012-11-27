@@ -1,0 +1,30 @@
+{
+	"compilation": {
+		"fragments": [
+			{"engine": "freemarker"}
+		],
+		"logic": [
+			{"engine": "closure", "compilationLevel": "ADVANCED_OPTIMIZATIONS"}
+		],
+		"presentation": [
+			{"engine": "sass", "outputStyle": "compressed"}
+		]
+	},
+	"languages": {
+		"en-US": {
+			"deploymentDestination": "brick@${appname}.com/opt/en/${appname}",
+			"rootUrl": "http://${appname}.com"
+		},
+		"en-CA": {
+			"deploymentDestination": "brick@${appname}.ca/opt/${appname}",
+			"rootUrl": "http://${appname}.ca"
+		},
+		"es": {
+			"deploymentDestination": "brick@${appname}.com/opt/es/${appname}",
+			"rootUrl": "http://es.${appname}.com"
+		}
+	},
+	"buildDestination": "brick@123.456.789.000/opt/${appname}",
+	"hoursUntilExpiration": 24,
+	"hoursUntilDeletion": 168
+}

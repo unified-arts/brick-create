@@ -1,0 +1,19 @@
+{
+    "obsoleteTitle": "Error: Navegador Obsoleto",
+    "obsolete": "Usted está utilizando un navegador que es demasiado <strong>obsoleto</strong> para ejecutar esta aplicación.",
+    "upgradePrefix": "",
+    "upgrade": "Actualiza tu navegador",
+    "upgradeUrl": "http://browsehappy.com",
+    "upgradeSuffix": " <small>(Inglés)</small>.",
+    "chromePrefix": "Si usted no tiene permiso para actualizar el navegador, ",
+    "chrome": "instalar Google Chrome Frame",
+    "chromeUrl": "http://www.google.com/chromeframe?redirect=true&hl=es",
+    "chromeSuffix": ".",
+    "jsStartFailure": "Usted está utilizando un navegador tiene JavaScript desactivado (o tal vez ni siquiera lo soporta). Por favor, asegúrese de que JavaScript habilitado para usar esta aplicación.",
+    "jsDomFailure": "La aplicación no pudo terminar la descarga. Por favor, actualice la página.",
+    "jsFinishFailure": "La aplicación no pudo terminar de arrancar. Por favor, actualice la página.",
+    "supportPrefix": "Si el problema persiste, póngase en contacto con soporte en ",
+    "support": "support@example.com",
+    "supportEmail": "mailto:support@example.com",
+    "supportSuffix": "."
+}

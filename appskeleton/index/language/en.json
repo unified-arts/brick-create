@@ -1,0 +1,19 @@
+{
+    "obsoleteTitle": "Error: Obsolete Browser",
+    "obsolete": "You are using a browser that is too <strong>obsolete</strong> to run this application.",
+    "upgradePrefix": "Please ",
+    "upgrade": "upgrade your browser",
+    "upgradeUrl": "http://browsehappy.com",
+    "upgradeSuffix": ".",
+    "chromePrefix": "If you do not have permission to upgrade your browser, ",
+    "chrome": "install Google Chrome Frame",
+    "chromeUrl": "http://www.google.com/chromeframe?redirect=true",
+    "chromeSuffix": ".",
+    "jsStartFailure": "You are using a browser that has JavaScript disabled (or perhaps does not even support it). Please make sure JavaScript is enabled to use this application.",
+    "jsDomFailure": "The application was unable to finish downloading. Please refresh the page.",
+    "jsFinishFailure": "The application was unable to finish booting up. Please refresh the page.",
+    "supportPrefix": "If the problem persists, contact support at ",
+    "support": "support@example.com",
+    "supportEmail": "mailto:support@example.com",
+    "supportSuffix": "."
+}

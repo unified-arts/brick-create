@@ -1,0 +1,19 @@
+{
+	"iAmSoObsessiveThatINeedMyOwnSpecialConfiguration": true,
+	"compilation": {
+		"fragments": [
+			{"engine": "freemarker"}
+		],
+		"logic": [
+			{"engine": "closure", "compilationLevel": "ADVANCED_OPTIMIZATIONS"}
+		],
+		"presentation": [
+			{"engine": "sass", "outputStyle": "compressed"}
+		]
+	},
+	"languages": ["en"],
+	"buildDestination": "/super/special/build/destination",
+	"rootUrl": "http://ultra.fancy.naming.scheme",
+	"hoursUntilExpiration": 0,
+	"hoursUntilDeletion": 0
+}

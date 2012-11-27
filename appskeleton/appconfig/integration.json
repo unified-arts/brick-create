@@ -1,0 +1,18 @@
+{
+	"compilation": {
+		"fragments": [
+			{"engine": "freemarker"}
+		],
+		"logic": [
+			{"engine": "closure", "compilationLevel": "ADVANCED_OPTIMIZATIONS"}
+		],
+		"presentation": [
+			{"engine": "sass", "outputStyle": "compressed"}
+		]
+	},
+	"languages": ["en", "es"],
+	"buildDestination": "brick@devserver/var/www/${appname}/httpdocs",
+	"rootUrl": "http://devserver:928/${appname}",
+	"hoursUntilExpiration": 0,
+	"hoursUntilDeletion": 0
+}

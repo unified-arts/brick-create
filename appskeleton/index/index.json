@@ -1,0 +1,10 @@
+{
+	"logic": [
+		"components/example",
+		"pages/home"
+	],
+	"style": [
+		"pages/home",
+		"components/example"
+	]
+}
