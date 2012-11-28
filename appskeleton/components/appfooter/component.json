@@ -1,0 +1,8 @@
+{
+	"aliases": {
+		"appnav": "components.appnav"
+	},
+	"styles": [
+		"styles/footer.css.scss"
+	]
+}

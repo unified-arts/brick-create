@@ -1,0 +1,14 @@
+{
+	"aliases": {
+		"standard": "layouts.standard",
+		"appnav": "components.appnav"
+	},
+	"styles": [
+		"styles/standard.css.scss"
+	],
+	"regions": [
+		"header",
+		"main",
+		"rail"
+	]
+}

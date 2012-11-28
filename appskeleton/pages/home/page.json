@@ -1,0 +1,7 @@
+{
+	"urlFragment": "/^?/",
+	"layout": "layouts.standard",
+	"styles": [
+		"styles/home.css.scss"
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"processors": {
+		"fragments": [
+			{"engine": "freemarker"}
+		],
+		"scripts": [
+			{"engine": "closure", "compilationLevel": "ADVANCED_OPTIMIZATIONS"}
+		],
+		"styles": [
+			{"engine": "png2datauri", "imageMaxKb": 30},
+			{"engine": "sass", "outputStyle": "compressed"}
+		]
+	},
+	"buildLanguages": ["en-US", "en-CA", "es"],
+	"buildDirectory": "/tmp/brick/${appname}",
+	"hoursUntilExpiration": 24,
+	"hoursUntilDeletion": 168,
+	"deploymentDestinations": {
+		"production": {
+			"resources": "brick@cdn.example.com/${appname}",
+			"buildFiles": {
+				"en-US": "brick@${appname}.com/opt/en/${appname}",
+				"en-CA": "brick@${appname}.ca/opt/en/${appname}",
+				"es": "brick@${appname}.com/opt/es/${appname}"
+			}
+		},
+		"integration": "brick@123.456.7.890/opt/${appname}",
+		"betaserver": {
+			"resources": "brick@cdn2.example.com/${appname}",
+			"buildFiles": {
+				"en-US": "brick@${appname}.com/var/www/beta/en/${appname}",
+				"en-CA": "brick@${appname}.ca/var/www/beta/en/${appname}",
+				"es": "brick@${appname}.com/var/www/beta/es/${appname}"
+			}
+		}
+	}
+}

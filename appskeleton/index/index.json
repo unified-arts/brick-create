@@ -1,10 +1,11 @@
 {
-	"logic": [
-		"components/example",
-		"pages/home"
+	"scripts": [
+		"components/appnav",
 	],
-	"style": [
+	"styles": [
+		"layouts/standard",
 		"pages/home",
-		"components/example"
+		"components/appnav",
+		"components/appfooter"
 	]
 }

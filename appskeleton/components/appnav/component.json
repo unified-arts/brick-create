@@ -1,0 +1,11 @@
+{
+	"aliases": {
+		"appnav": "components.appnav"
+	},
+	"scripts": [
+		"scripts/nav.js"
+	],
+	"styles": [
+		"styles/nav.css.scss"
+	]
+}

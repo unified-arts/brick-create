@@ -12,10 +12,10 @@
 		]
 	},
 	"buildLanguages": ["en"],
-	"buildDirectory": "../httpdocs",
+	"buildDirectory": "C:\\Program Files\\Apache Group\\Apache2\\htdocs",
 	"hoursUntilExpiration": 0,
 	"hoursUntilDeletion": 0,
 	"deployDestinations": {
-		"sandbox": "brick@123.4.567.891/var/www/${appname}"
+		"sandbox": "brick@123.4.567.890/var/www/${appname}"
 	}
 }
