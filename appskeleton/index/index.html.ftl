@@ -4,7 +4,7 @@
         <meta charset="${brick.characterSet}">
         <meta name="robots" content="none">
         <!--[if lt IE 9]>
-            <title>${translation.index.obsoleteTitle}</title>
+            <title>${language.index.obsoleteTitle}</title>
             <meta http-equiv="cache-control" content="no-cache">
             <meta http-equiv="pragma" content="no-cache">
             <meta http-equiv="expires" content="-1">
