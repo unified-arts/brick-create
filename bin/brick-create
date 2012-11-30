@@ -1,0 +1,47 @@
+#!/bin/bash
+
+## @file brick-create
+#  Create a new Brick app
+#
+#  @todo Add option to explicitly specify location
+#  @todo Add --help option
+#
+#  @author Derek Dunagan <derek@unifiedarts.com>
+
+APPSDIR=$BRICK_APPSDIRECTORY
+
+if [[ -z $BRICK_APPSDIRECTORY ]]; then
+	echo '  You have not set "appsDirectory" in ~/.brick/brickconfig.json'
+	echo '  "appsDirectory" is required for `brick create` to work'
+else
+	APPGROUP=${1%%:*}
+	APPNAME=${1#*:}
+
+	if [[ ! -d $APPSDIR ]]; then
+		mkdir $APPSDIR
+	fi
+
+	if [[ ! -d "$APPSDIR/$APPGROUP" ]]; then
+		mkdir "$APPSDIR/$APPGROUP"
+	fi
+
+	if [[ "$APPGROUP" != "$APPNAME" ]]; then
+		APPDIR="$APPSDIR/$APPGROUP/$APPNAME"
+		if [[ ! -d $APPDIR ]]; then
+			mkdir $APPDIR
+		fi
+	else
+		APPDIR="$APPSDIR/$APPNAME"
+	fi
+
+	if [[ ! -z $BRICK_APPDIRECTORYNAME ]]; then
+		APPDIR="$APPDIR/$BRICK_APPDIRECTORYNAME"
+		if [[ ! -d $APPDIR ]]; then
+			mkdir $APPDIR
+		fi
+	fi
+
+	SCRIPTDIR="`dirname $0`"
+	cp -r "${SCRIPTDIR%/*}/appskeleton/" $APPDIR
+	cd $APPDIR; pwd; ls
+fi
