@@ -11,11 +11,13 @@
 APPSDIR=$BRICK_APPSDIRECTORY
 
 if [[ -z $BRICK_APPSDIRECTORY ]]; then
-	echo '  You have not set "appsDirectory" in ~/.brick/brickconfig.json'
-	echo '  "appsDirectory" is required for `brick create` to work'
+	echo '  You have not set "appsDirectory" in:'
+	echo "    $HOME/.brick/brickconfig.json"
+	echo '  "appsDirectory" is required for `brick create` to work (for now)'
 else
 	APPGROUP=${1%%:*}
 	APPNAME=${1#*:}
+	APPNAME=${APPNAME%%:*}
 
 	if [[ ! -d $APPSDIR ]]; then
 		mkdir $APPSDIR
@@ -41,7 +43,15 @@ else
 		fi
 	fi
 
-	SCRIPTDIR="`dirname $0`"
-	cp -r "${SCRIPTDIR%/*}/appskeleton/" $APPDIR
-	cd $APPDIR; pwd; ls
+	if [[ "$(ls -A $APPDIR)" ]]; then
+		echo '  There is something already at:'
+		echo "    $APPDIR"
+	else
+		echo '  Creating Brick app...'
+		SCRIPTDIR="`dirname $0`"
+		cp -r "${SCRIPTDIR%/*}/appskeleton/" $APPDIR
+		cd $APPDIR;
+		echo "    $APPDIR"
+		echo '  Success!'
+	fi
 fi
