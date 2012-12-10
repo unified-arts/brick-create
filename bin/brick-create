@@ -19,39 +19,44 @@ else
 	APPNAME=${1#*:}
 	APPNAME=${APPNAME%%:*}
 
-	if [[ ! -d $APPSDIR ]]; then
-		mkdir $APPSDIR
-	fi
-
-	if [[ ! -d "$APPSDIR/$APPGROUP" ]]; then
-		mkdir "$APPSDIR/$APPGROUP"
-	fi
-
-	if [[ $APPNAME != $1 ]]; then
-		APPDIR="$APPSDIR/$APPGROUP/$APPNAME"
-		if [[ ! -d $APPDIR ]]; then
-			mkdir $APPDIR
-		fi
+	if [[ -z $APPGROUP ]]; then
+		echo "  You can't create emptiness"
+		echo '  Try something like `brick create tpsreport`'
 	else
-		APPDIR="$APPSDIR/$APPNAME"
-	fi
-
-	if [[ ! -z $BRICK_APPDIRECTORYNAME ]]; then
-		APPDIR="$APPDIR/$BRICK_APPDIRECTORYNAME"
-		if [[ ! -d $APPDIR ]]; then
-			mkdir $APPDIR
+		if [[ ! -d $APPSDIR ]]; then
+			mkdir $APPSDIR
 		fi
-	fi
 
-	if [[ "$(ls -A $APPDIR)" ]]; then
-		echo '  There is something already at:'
-		echo "    $APPDIR"
-	else
-		echo '  Creating Brick app...'
-		SCRIPTDIR="`dirname $0`"
-		cp -r "${SCRIPTDIR%/*}/appskeleton/" $APPDIR
-		cd $APPDIR;
-		echo "    $APPDIR"
-		echo '  Success!'
+		if [[ ! -d "$APPSDIR/$APPGROUP" ]]; then
+			mkdir "$APPSDIR/$APPGROUP"
+		fi
+
+		if [[ $APPNAME != $1 ]]; then
+			APPDIR="$APPSDIR/$APPGROUP/$APPNAME"
+			if [[ ! -d $APPDIR ]]; then
+				mkdir $APPDIR
+			fi
+		else
+			APPDIR="$APPSDIR/$APPNAME"
+		fi
+
+		if [[ ! -z $BRICK_APPDIRECTORYNAME ]]; then
+			APPDIR="$APPDIR/$BRICK_APPDIRECTORYNAME"
+			if [[ ! -d $APPDIR ]]; then
+				mkdir $APPDIR
+			fi
+		fi
+
+		if [[ "$(ls -A $APPDIR)" ]]; then
+			echo '  There is something already at:'
+			echo "    $APPDIR"
+		else
+			echo '  Creating Brick app...'
+			SCRIPTDIR="`dirname $0`"
+			cp -r "${SCRIPTDIR%/*}/appskeleton/" $APPDIR
+			cd $APPDIR;
+			echo "    $APPDIR"
+			echo '  Success!'
+		fi
 	fi
 fi
