@@ -25,7 +25,7 @@ else
 		mkdir "$APPSDIR/$APPGROUP"
 	fi
 
-	if [[ "$APPGROUP" != "$APPNAME" ]]; then
+	if [[ $APPNAME != $1 ]]; then
 		APPDIR="$APPSDIR/$APPGROUP/$APPNAME"
 		if [[ ! -d $APPDIR ]]; then
 			mkdir $APPDIR
